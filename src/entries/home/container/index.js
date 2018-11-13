@@ -38,6 +38,7 @@ class Index extends PureComponent {
     render() {
         return (
             <View style={styles.pageBox}>
+                <View style={{ height: 44 }} />
                 <View>
                     <Text onPress={this.openConfirm.bind(this)}>打开弹窗</Text>
                     <Text>{this.state.user}</Text>

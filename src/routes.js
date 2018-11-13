@@ -22,9 +22,9 @@ const setIcon = function({ ...set }) {
                 source={set.source}
                 style={{
                     width: 24,
-                    height: 24
+                    height: 24,
+                    tintColor: set.focused ? "#ff0000" : set.tintColor
                 }}
-                tintColor={set.focused ? "red" : set.tintColor}
             />
         </View>
     );
