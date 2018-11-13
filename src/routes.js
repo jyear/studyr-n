@@ -17,7 +17,7 @@ import myIcon from "./assets/images/my.png";
 const setIcon = function({ ...set }) {
     return (
         <View style={styles.iconbox}>
-            <Text style={styles.text} />
+            <View style={styles.text} />
             <Image
                 source={set.source}
                 style={{
