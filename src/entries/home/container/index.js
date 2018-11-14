@@ -14,7 +14,9 @@ class Index extends PureComponent {
             user: null
         };
     }
-    addBook() {}
+    addBook() {
+        alert("dsds");
+    }
     componentDidMount() {
         let user = global.realm.objects("User");
         this.setState({
@@ -39,8 +41,14 @@ class Index extends PureComponent {
     render() {
         return (
             <View style={styles.pageBox}>
-                <StatusBar backgroundColor="red" />
-                <View style={{ height: 44 }} />
+                <StatusBar
+                    animated={true}
+                    hidden={false}
+                    backgroundColor={"red"}
+                    translucent={true}
+                    barStyle={"light-content"}
+                />
+                <View style={{ height: 24 }} />
                 <View>
                     <Text onPress={this.openConfirm.bind(this)}>打开弹窗</Text>
                     <Text>{this.state.user}</Text>
