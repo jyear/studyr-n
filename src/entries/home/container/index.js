@@ -1,8 +1,9 @@
 import React, { PureComponent } from "react";
-import { View, Text, Image, Platform } from "react-native";
+import { View, Text, Image, Platform, StatusBar } from "react-native";
 import addIcon from "../../../assets/images/add.png";
 import Confirm from "../../../components/confirm";
 import styles from "./style";
+
 class Index extends PureComponent {
     constructor() {
         super();
@@ -38,6 +39,7 @@ class Index extends PureComponent {
     render() {
         return (
             <View style={styles.pageBox}>
+                <StatusBar backgroundColor="red" />
                 <View style={{ height: 44 }} />
                 <View>
                     <Text onPress={this.openConfirm.bind(this)}>打开弹窗</Text>
