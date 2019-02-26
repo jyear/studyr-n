@@ -52,6 +52,7 @@ class Index extends PureComponent {
                 <View>
                     <Text onPress={this.openConfirm.bind(this)}>打开弹窗</Text>
                     <Text>{this.state.user}</Text>
+                    <Text>你是大傻逼</Text>
                 </View>
                 <Confirm
                     cancelClick={this.cancelDetailModal.bind(this)}
