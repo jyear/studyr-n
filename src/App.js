@@ -4,6 +4,7 @@ import { Text } from "react-native";
 import { Provider } from "react-redux";
 import Route from "./routes";
 import realm from "./realms/index";
+
 global.store = storeFun();
 global.realm = realm();
 

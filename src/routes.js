@@ -14,6 +14,8 @@ import connectIcon from "./assets/images/connect.png";
 import findIcon from "./assets/images/find.png";
 import myIcon from "./assets/images/my.png";
 
+import NavigationService from "./util/navigationservice";
+
 const setIcon = function({ ...set }) {
     return (
         <View style={styles.iconbox}>
@@ -103,6 +105,12 @@ const styles = StyleSheet.create({
 
 export default class Route extends Component {
     render() {
-        return <RootRouter />;
+        return (
+            <RootRouter
+                ref={navigatorRef => {
+                    NavigationService.setTopLevelNavigator(navigatorRef);
+                }}
+            />
+        );
     }
 }

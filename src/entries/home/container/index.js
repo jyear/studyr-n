@@ -1,5 +1,6 @@
 import React, { PureComponent } from "react";
 import { View, Text, Image, Platform, StatusBar } from "react-native";
+import NavigationService from "../../../util/navigationservice";
 import addIcon from "../../../assets/images/add.png";
 import Confirm from "../../../components/confirm";
 import styles from "./style";
@@ -38,6 +39,10 @@ class Index extends PureComponent {
             isVisible: true
         });
     }
+    goMy() {
+        console.log(NavigationService);
+        NavigationService.navigate("My");
+    }
     render() {
         return (
             <View style={styles.pageBox}>
@@ -53,6 +58,7 @@ class Index extends PureComponent {
                     <Text onPress={this.openConfirm.bind(this)}>打开弹窗</Text>
                     <Text>{this.state.user}</Text>
                     <Text>你是大傻逼</Text>
+                    <Text onPress={this.goMy.bind(this)}>去我</Text>
                 </View>
                 <Confirm
                     cancelClick={this.cancelDetailModal.bind(this)}
