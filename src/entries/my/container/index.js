@@ -17,6 +17,7 @@ export default class Index extends PureComponent {
                 "http://192.168.20.137:8003/transfer?from=eyJpdiI6Ik1ERXdNakF6TURRd05UQTJNRGN3T0E9PSIsInZhbHVlIjoiS05pVFFwSWc0alJYT0tjTTVneklxMTFESm9lS3hIRndIM01QZGlia1J1K1pLNmpHQjVyZmtiRXVzUWRLNE1QLyJ9"
         });
     }
+
     shouldLoad(e) {
         console.log(1, e);
     }
